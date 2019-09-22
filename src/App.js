@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import CharacterCard from './CharacterCard';
 import WordCard from './WordCard';
-const word = "Hello";
+
+const words =["Hello","Gold","123456789","Food","pig","chicken"]
+var a = parseInt(Math.random() * 10)
+const word = words[a]
+
 class App extends Component {
   render() {
     return (
-        <div>
-            <WordCard value="hello"/>
+      <div className="App">
+            <WordCard value={word}/>
         </div>
       );
    }
